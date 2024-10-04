@@ -1,7 +1,7 @@
-$body-color : rgb(241,242,246);
+$body-color : #f4f4f4;
 $container-left-color : red;
 $container-right-color : blue;
-$topbar-active-color : #FDDF35;
+$topbar-active-color : #FFD600;
 $top-bar-nonactive-color : #9B9B9B;
 $text-bold-color: rgb(48,67,92);
 $blue-ciel: rgb(2,140,150);
@@ -29,14 +29,23 @@ body{
 
     background-color: $body-color;
 
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
     .container {
         width: 100vw;
         height: auto;
         display: flex;
         justify-content: center;
         gap: 2rem;
-        margin: 2rem;
     }
+
+
+
     .leftcontainer{
         width: 50vw;
         height: auto;
@@ -46,7 +55,7 @@ body{
 
         .leftcontainer-topcontainer{
             width: 100%;
-            height: 20vh;
+            height: 15vh;
             background-color: white;
             display: flex;
             color: white;
@@ -141,6 +150,8 @@ body{
                 align-items: center;
                 gap: 1.4rem;
 
+                
+
 
                 button {
                     width: 30%;
@@ -168,8 +179,30 @@ body{
                 .inputcontainer {
                     display: flex;
                     flex-direction: column;
-                    gap: 0.3rem;
+                    gap: 1rem;
                     width: 100%;
+
+                    .rangeinputs{
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 100%;
+                        height: 1px;
+                        background: black;
+                        outline: none;
+                    }
+                    .rangeinputs::-moz-range-thumb{
+                        width: 24px;
+                        height: 24px;
+                        background-image: url('../images/icon.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        border: none;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 1;
+                    }
 
                     label {
                         font-size: 0.9rem;
